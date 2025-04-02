@@ -1,6 +1,6 @@
 {
   "name": "Blood Sugar Converter",
-  "short_name": "BSC",
+  "short_name": "BSC - Beta",
   "start_url": "/clean",
   "display": "standalone",
   "background_color": "#ffffff",
