@@ -34,7 +34,7 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <div className="mx-[40%] my-[20%]">{children}</div>
+            <div className="flex min-h-screen flex-col items-center justify-center">{children}</div>
           </ThemeProvider>
       </body>
     </html>
