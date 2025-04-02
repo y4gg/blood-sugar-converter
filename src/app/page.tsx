@@ -137,7 +137,7 @@ export default function Home() {
         </div>
       </CardFooter>
     </Card>
-    <Accordion type="single" collapsible className="w-128 mt-4">
+    <Accordion type="single" collapsible className="w-64 md:w-96 mt-4">
       <AccordionItem value="item-1">
         <AccordionTrigger>How does the auto mode work?</AccordionTrigger>
         <AccordionContent>
