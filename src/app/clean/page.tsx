@@ -24,6 +24,10 @@ export default function Home() {
   const [inputValue, setInputValue] = useState<string>("");
   const [result, setResult] = useState<string>("");
 
+  if (!selectedMode) {
+    setSelectedMode("auto");
+  }
+
   useEffect(() => {
     if (!inputValue || !selectedMode) {
       setResult("");
