@@ -18,13 +18,6 @@ import {
   SelectTrigger,
   SelectValue
 } from "@/components/ui/select";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-import Link from "next/link";
 
 export default function Home() {
   const [selectedMode, setSelectedMode] = useState<string | null>(null);
@@ -78,7 +71,7 @@ export default function Home() {
                 setSelectedMode(value);
                 setInputValue("");
                 setResult("");
-                }}>
+                }} defaultValue="auto">
                 <SelectTrigger id="mode" className="w-full">
                   <SelectValue placeholder="Select" />
                 </SelectTrigger>
@@ -106,7 +99,6 @@ export default function Home() {
                   : selectedMode === "2" 
                     ? "Example: 10mol/l"
                     : "Select Mode first"} 
-                disabled={!selectedMode}
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
               />
