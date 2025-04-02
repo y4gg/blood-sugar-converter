@@ -18,6 +18,13 @@ import {
   SelectTrigger,
   SelectValue
 } from "@/components/ui/select";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import Link from "next/link";
 
 export default function Home() {
   const [selectedMode, setSelectedMode] = useState<string | null>(null);
@@ -130,6 +137,27 @@ export default function Home() {
         </div>
       </CardFooter>
     </Card>
+    <Accordion type="single" collapsible className="w-128 mt-4">
+      <AccordionItem value="item-1">
+        <AccordionTrigger>How does the auto mode work?</AccordionTrigger>
+        <AccordionContent>
+          If the input is 35 or less, the auto mode assumes that the input is in mmol/l units and converts it to mg/dl. If the input is greater than 35, the auto mode assumes that the input is in mg/dl units and converts it to mmol/l.
+        </AccordionContent>
+      </AccordionItem>
+      <AccordionItem value="item-2">
+        <AccordionTrigger>What if the auto mode does not work?</AccordionTrigger>
+        <AccordionContent>
+          You can always manually select the conversion mode.
+        </AccordionContent>
+      </AccordionItem>
+      <AccordionItem value="item-3">
+        <AccordionTrigger>Who is the creator? Can I support him?</AccordionTrigger>
+        <AccordionContent>
+          Yes you can! You can support me on GitHub by following me there or by starring the repository.
+          <Link href="https://y4.gg"> Click here to visit my website</Link>
+        </AccordionContent>
+      </AccordionItem>
+    </Accordion>
     </>
   )
 }
