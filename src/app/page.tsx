@@ -101,11 +101,14 @@ export default function Home() {
                 id="unit" 
                 type="decimal"
                 min="0" 
-                placeholder={selectedMode === "1" 
-                  ? "Example: 180mg/dl"
+                placeholder={
+                  selectedMode === "1" 
+                    ? "Example: 180mg/dl"
                   : selectedMode === "2" 
                     ? "Example: 10mol/l"
-                    : "Select Mode first"} 
+                  : selectedMode === "auto" 
+                    ? "Example: 180mg/dl or 10mol/l"
+                  : "Select Mode first"} 
                 disabled={!selectedMode}
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
