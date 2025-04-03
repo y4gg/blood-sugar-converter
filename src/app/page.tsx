@@ -144,7 +144,7 @@ export default function Home() {
       <AccordionItem value="item-1">
         <AccordionTrigger>How does the auto mode work?</AccordionTrigger>
         <AccordionContent>
-          If the input is 35 or less, the auto mode assumes that the input is in mmol/l units and converts it to mg/dl. If the input is greater than 35, the auto mode assumes that the input is in mg/dl units and converts it to mmol/l.
+          If the input is 35 or less, the auto mode assumes that the input is in mmol/l and converts it to mg/dl. If the input is greater than 35, the auto mode assumes that the input is in mg/dl and converts it to mmol/l.
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-2">
