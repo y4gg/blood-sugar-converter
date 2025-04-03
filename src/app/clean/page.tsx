@@ -82,7 +82,7 @@ export default function Home() {
                 <SelectContent position="popper">
                   <SelectItem value="1">From mg/dl to mmol/l</SelectItem>
                   <SelectItem value="2">From mol/l to mg/dl</SelectItem>
-                  <SelectItem value="auto">Auto Detection - Beta</SelectItem>
+                  <SelectItem value="auto">Auto detect</SelectItem>
                 </SelectContent>
               </Select>
             </div>
