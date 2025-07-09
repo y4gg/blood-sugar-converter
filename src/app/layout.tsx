@@ -38,7 +38,7 @@ export default function RootLayout({
           <div className="flex min-h-screen flex-col items-center justify-center">
             {children}
           </div>
-          <div className="absolute bottom-4 left-4">
+          <div className="absolute bottom-4 right-4">
             <ModeToggle />
           </div>
         </ThemeProvider>
