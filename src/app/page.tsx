@@ -27,7 +27,7 @@ import {
 import Link from "next/link";
 
 export default function Home() {
-  const [selectedMode, setSelectedMode] = useState<string | null>(null);
+  const [selectedMode, setSelectedMode] = useState<string>("auto");
   const [inputValue, setInputValue] = useState<string>("");
   const [result, setResult] = useState<string>("");
 
@@ -78,9 +78,11 @@ export default function Home() {
                 setSelectedMode(value);
                 setInputValue("");
                 setResult("");
-                }}>
+                }}
+                defaultValue="auto"
+              >
                 <SelectTrigger id="mode" className="w-full">
-                  <SelectValue placeholder="Select" />
+                  <SelectValue />
                 </SelectTrigger>
                 <SelectContent position="popper">
                   <SelectItem value="1">From mg/dl to mmol/l</SelectItem>

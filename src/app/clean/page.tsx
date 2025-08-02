@@ -20,13 +20,11 @@ import {
 } from "@/components/ui/select";
 
 export default function Home() {
-  const [selectedMode, setSelectedMode] = useState<string | null>(null);
+  const [selectedMode, setSelectedMode] = useState<string>("auto");
   const [inputValue, setInputValue] = useState<string>("");
   const [result, setResult] = useState<string>("");
 
-  if (!selectedMode) {
-    setSelectedMode("auto");
-  }
+  
 
   useEffect(() => {
     if (!inputValue || !selectedMode) {
@@ -77,7 +75,7 @@ export default function Home() {
                 setResult("");
                 }} defaultValue="auto">
                 <SelectTrigger id="mode" className="w-full">
-                  <SelectValue placeholder="Select" />
+                  <SelectValue />
                 </SelectTrigger>
                 <SelectContent position="popper">
                   <SelectItem value="1">From mg/dl to mmol/l</SelectItem>
